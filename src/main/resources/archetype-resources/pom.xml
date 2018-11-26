@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.1.RELEASE</version>
+  </parent>
+
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>pom</packaging>
+  <description>xxxx ${product} springCloud project</description>
+
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>${product}-api</module>
+    <module>${product}-base</module>
+    <module>${product}-business</module>
+    <module>${product}-reference</module>
+    <module>${product}-provider</module>
+    <module>start</module>
+  </modules>
+
+  <properties>
+    <json-lib.version>2.4</json-lib.version>
+  </properties>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>net.sf.json-lib</groupId>
+      <artifactId>json-lib</artifactId>
+      <classifier>jdk15</classifier>
+      <version>${json-lib.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>
